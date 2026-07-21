@@ -310,3 +310,63 @@ nav {
   padding: 0;
   margin-left: -5px;
 }
+
+.submenu-container {
+  position: absolute;
+  display: flex;
+  inset: 0;
+  gap: 18rem;
+  justify-content: space-evenly;
+  background: rgba(0, 0, 0, 0.7);
+  height: max-content;
+  padding: 70px 100px;
+  top: 45.3rem;
+}
+
+.cta-container {
+  display: flex;
+  flex-direction: column;
+  background: transparent;
+  gap: 15px;
+  text-decoration: none;
+}
+
+.cta-container h1 {
+  background: linear-gradient(
+    135deg,
+    #c6f1f7 0%,
+    #f983e9 45%,
+    #b877ff 70%,
+    #c2e9cd 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.separator {
+  height: 2px;
+  background: white;
+}
+
+.submenu-container .cta-container:nth-child(2) {
+  transform: translateX(-60px);
+}
+
+.submenu-container .cta-container:nth-child(3) {
+  transform: translateX(-120px);
+}
+
+.submenu-container .cta-container:last-child {
+  transform: translateX(-160px);
+}
+
+.submenu-container .cta-container:nth-child(1) .separator,
+.submenu-container .cta-container:nth-child(2) .separator,
+.submenu-container .cta-container:nth-child(3) .separator,
+.submenu-container .cta-container:last-child .separator {
+  width: 300%;
+}
