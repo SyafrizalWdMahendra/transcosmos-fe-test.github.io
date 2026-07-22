@@ -433,12 +433,12 @@ nav {
 
 .upper-description {
   display: flex;
-  gap: 40px;
-  margin-bottom: 20px;
+  gap: 8rem;
+  margin-bottom: 30px;
 }
 
 .left-side {
-  width: 44%;
+  width: 43%;
 }
 
 .right-side {
@@ -448,6 +448,7 @@ nav {
 .left-side p,
 .right-side p {
   color: #e4e4e4;
+  font-size: 0.9rem;
 }
 
 .tabbing-section{
@@ -525,11 +526,13 @@ nav {
 .tabbing-content p:first-child{
   color: #E4E4E4;
   width: 20%;
+  font-size: 0.9rem;
 }
 
 .tabbing-content p:last-child{
   color: #E4E4E4;
-  width: 45%;
+  width: 40%;
+  font-size: 0.9rem;
 }
 
 .tabbing-body img{
@@ -544,11 +547,12 @@ nav {
 
 .under-description{
   display: flex;
-  width: 51%;
-  margin-top: 20px;
+  width: 46%;
+  margin-top: 30px;
 }
 .under-description p{
   color: #E4E4E4;
+  font-size: 0.9rem;
 }
 
 .about-description {
@@ -581,6 +585,7 @@ nav {
   background-clip: text;
   -webkit-text-fill-color: transparent;
   color: transparent;
+  font-size: 0.9rem;
 }
 
 .about-tagline-container img {
@@ -739,10 +744,11 @@ nav {
 .section-two p,
 .section-three p,
 .section-four p {
-  padding: 20px 160px 20px 60px;
+  padding: 20px 190px 20px 60px;
   text-align: start;
   margin-right: 90px;
   color: #E4E4E4;
+  font-size: 0.9rem;
 }
 
 .about-value img {
@@ -754,4 +760,156 @@ nav {
   .about-value {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+}
+
+#get-started {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+#get-started img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-top: 8rem;
+}
+
+
+.get-started-header{
+  inset: 0;
+  margin-top: 8rem;
+  position: absolute;
+  background: transparent;
+  padding: 100px 100px 60px;
+}
+
+.get-started-title{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background: transparent;
+}
+
+.get-started-title p{
+  background: linear-gradient(
+      135deg,
+      #c6f1f7 0%,
+      #f983e9 36%,
+      #b877ff 74%,
+      #c2e9cd 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  width: 8%;
+  font-size: 0.9rem;
+}
+
+.get-started-title .title-end{
+  display: flex;
+  gap: 4rem;
+  background: transparent;
+}
+
+.get-started-title .title-end p{
+  width: 25%;
+  color: #ffffff;
+  background: none;
+  -webkit-background-clip: initial;
+  background-clip: initial;
+  -webkit-text-fill-color: currentColor;
+  font-size: 0.9rem;
+  margin-right: 20px;
+}
+
+.get-started-body{
+  display: flex;
+  margin-top: 8rem;
+  background: transparent;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.get-started-desc{
+  display: flex;
+  width: 27.5%;
+  justify-content: start;
+  align-items: end;
+  background: transparent;
+  margin-right: 5rem;
+}
+
+.get-started-desc p{
+  background: linear-gradient(
+    135deg,
+    #c6f1f7 0%,
+    #f983e9 36%,
+    #b877ff 74%,
+    #c2e9cd 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  font-size: 0.9rem;
+}
+
+#get-started .get-started-tagline {
+  display: flex;
+  flex-direction: column;
+  background: transparent;
+  width: 50%;
+  align-items: end;
+}
+
+#get-started .get-started-tagline img {
+  width: 16%;
+  height: auto;
+  background: transparent;
+  margin-right: 13.8rem;
+}
+
+.get-started-tagline h1{
+  font-size: 4rem;
+  font-weight: 200;
+  background: linear-gradient(
+    135deg,
+    #c6f1f7 0%,
+    #f983e9 36%,
+    #b877ff 74%,
+    #c2e9cd 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+#get-started .get-started-content{
+  display: flex;
+  padding: 80px 100px; 
+  gap: 12.5rem;
+}
+
+#get-started .get-started-content .image-container {
+  display: flex;
+  flex-direction: column;
+  height: max-content;
+  align-items: start;
+}
+
+#get-started .get-started-content .image-container img {
+  width: 5rem !important;
+  margin-top: 0;
+  align-self: flex-start;
+}
+
+.get-started-right-content{
+  width: 76%;
+  display: flex;
+  justify-content: space-between;
+  gap: 70px;
+  font-size: 0.9rem;
 }
