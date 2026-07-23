@@ -2,22 +2,43 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
     <title>Transcosmos-Fe-Test</title>
     <link rel="stylesheet" href="css/index.css" />
   </head>
   <body>
     <header>
       <img src="images/background_image.png" alt="Background Image" />
-      <nav>
+      <button
+        class="hamburger"
+        id="hamburgerBtn"
+        aria-label="Toggle menu"
+        aria-expanded="false"
+        aria-controls="mainNav"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav id="main-nav">
         <div class="nav-links">
           <div class="grid-container">
             <div class="icon-container">
-              <img src="images/star_1.png" alt="Logo" />
-              <h1>Influenzailla</h1>
+              <!-- Ganti img logo dengan SVG starburst -->
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="white">
+                <path
+                  d="M16 0L18.5 11.5L24 2L20.5 13.5L32 10L22 16L32 22L20.5 18.5L24 30L18.5 20.5L16 32L13.5 20.5L8 30L11.5 18.5L0 22L10 16L0 10L11.5 13.5L8 2L13.5 11.5L16 0Z"
+                />
+              </svg>
+              <h1>Influenzilla</h1>
             </div>
-            <p>bespoke design and marketing services</p>
+            <p id="closeBtn">Close</p>
           </div>
+
           <ul>
             <li>About</li>
             <li>Services</li>

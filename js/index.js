@@ -112,3 +112,53 @@ document.addEventListener("DOMContentLoaded", () => {
     updateCarousel(0);
   }
 });
+
+(function () {
+  const hamburger = document.getElementById("hamburgerBtn");
+  const nav = document.getElementById("main-nav");
+  const closeBtn = document.getElementById("closeBtn");
+  let isOpen = false;
+  closeBtn.addEventListener("click", closeMenu);
+
+  function toggleMenu() {
+    isOpen = !isOpen;
+    hamburger.classList.toggle("active", isOpen);
+    nav.classList.toggle("open", isOpen);
+    hamburger.setAttribute("aria-expanded", isOpen);
+    document.body.style.overflow = isOpen ? "hidden" : "";
+  }
+
+  function closeMenu() {
+    if (!isOpen) return;
+    isOpen = false;
+    hamburger.classList.remove("active");
+    nav.classList.remove("open");
+    hamburger.setAttribute("aria-expanded", "false");
+    document.body.style.overflow = "";
+  }
+
+  hamburger.addEventListener("click", toggleMenu);
+
+  nav.querySelectorAll("li, a").forEach((el) => {
+    el.addEventListener("click", closeMenu);
+  });
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 335) closeMenu();
+  });
+
+  document.addEventListener("click", (e) => {
+    if (
+      window.innerWidth <= 335 &&
+      isOpen &&
+      !nav.contains(e.target) &&
+      !hamburger.contains(e.target)
+    ) {
+      closeMenu();
+    }
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && isOpen) closeMenu();
+  });
+})();
