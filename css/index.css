@@ -1392,6 +1392,10 @@ footer .nav-links li img {
   transform: translateY(-12.5px) rotate(-45deg);
 }
 
+#closeBtn {
+  display: none;
+}
+
 @media (max-width: 335px) {
   header,
   .hero-title,
@@ -1524,5 +1528,9 @@ footer .nav-links li img {
   /* Hide icons in mobile list */
   .nav-links li img {
     display: none;
+  }
+
+  #closeBtn {
+    display: block;
   }
 }
