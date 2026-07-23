@@ -1176,6 +1176,51 @@ footer .nav-links li img {
   background: #e28224;
 }
 
+.hamburger {
+  display: none;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  width: 32px;
+  height: 28px;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+.hamburger span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(
+    135deg,
+    #c6f1f7 0%,
+    #f983e9 36%,
+    #b877ff 74%,
+    #c2e9cd 100%
+  );
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+.hamburger.active span:nth-child(1) {
+  transform: translateY(12.5px) rotate(45deg);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-12.5px) rotate(-45deg);
+}
+
+#closeBtn {
+  display: none;
+}
+
 @media (max-width: 1250px) {
   nav,
   footer,
@@ -1345,57 +1390,6 @@ footer .nav-links li img {
   }
 }
 
-/* ============================= */
-/* RESPONSIVE: max-width 335px   */
-/* ============================= */
-
-/* 1. Hamburger Button */
-.hamburger {
-  display: none; /* Sembunyikan di desktop */
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  z-index: 1000;
-  width: 32px;
-  height: 28px;
-  flex-direction: column;
-  justify-content: space-between;
-  cursor: pointer;
-  background: transparent;
-  border: none;
-  padding: 0;
-}
-.hamburger span {
-  display: block;
-  width: 100%;
-  height: 3px;
-  background: linear-gradient(
-    135deg,
-    #c6f1f7 0%,
-    #f983e9 36%,
-    #b877ff 74%,
-    #c2e9cd 100%
-  );
-  border-radius: 2px;
-  transition: all 0.3s ease;
-  transform-origin: center;
-}
-/* Animasi hamburger jadi X */
-.hamburger.active span:nth-child(1) {
-  transform: translateY(12.5px) rotate(45deg);
-}
-.hamburger.active span:nth-child(2) {
-  opacity: 0;
-  transform: scaleX(0);
-}
-.hamburger.active span:nth-child(3) {
-  transform: translateY(-12.5px) rotate(-45deg);
-}
-
-#closeBtn {
-  display: none;
-}
-
 @media (max-width: 335px) {
   header,
   .hero-title,
@@ -1440,7 +1434,6 @@ footer .nav-links li img {
     gap: 0;
   }
 
-  /* ===== HEADER ROW: Logo + Close ===== */
   .grid-container {
     width: 100%;
     padding: 0;
@@ -1482,7 +1475,6 @@ footer .nav-links li img {
     background: rgba(255, 255, 255, 0.05);
   }
 
-  /* ===== MENU LIST ===== */
   .nav-links ul {
     display: flex;
     flex-direction: column;
@@ -1513,10 +1505,9 @@ footer .nav-links li img {
     background: rgba(255, 255, 255, 0.06);
   }
 
-  /* ===== GLOBE ICON ROW (last item) ===== */
   .nav-links li:last-child {
     border-bottom: 2px solid #ffffff;
-    font-size: 0; /* Hide text */
+    font-size: 0;
     padding: 14px 0;
   }
   .nav-links li:last-child::before {
@@ -1525,7 +1516,6 @@ footer .nav-links li img {
     filter: grayscale(1) brightness(2);
   }
 
-  /* Hide icons in mobile list */
   .nav-links li img {
     display: none;
   }
